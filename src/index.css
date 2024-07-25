@@ -11,3 +11,8 @@
   font-variation-settings:
     "slnt" 0;
 }
+
+/* DaisyUI overrides */
+.card.image-full:before {
+  opacity: 0;
+}

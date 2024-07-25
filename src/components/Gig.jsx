@@ -1,31 +1,34 @@
-import billieEilish from "../assets/Billie-Eilish.jpg";
-
-const Gig = () => {
+const Gig = (props) => {
   return (
-    <div className="card lg:card-side bg-base-100 card-bordered shadow-xl">
+    <div className="card image-full p-1">
       <figure>
-        <img className="_band-image" src={billieEilish} />
+        <img className="_band-image" src={props.bandImage} />
       </figure>
 
       <div className="card-body">
-        <h2 className="card-title _band-name">Billie Eilish</h2>
-
-        <article className="prose-neutral _event-description">
-          <p>BILLIE EILISH: HIT ME HARD AND SOFT: THE TOUR</p>
-        </article>
-
-        <div className="stats shadow">
+        <div className="stats bg-black/30">
           <div className="stat">
-            <div className="stat-title">Where</div>
-            <div className="stat-value _event-location">London - The O2</div>
+            <div className="stat-title font-medium"><p className="badge badge-accent">{props.bandName}</p></div>
+            <div className="stat-value text-xl _event-location">
+              <div className="badge badge-accent">{props.eventDescription}</div>
+            </div>
           </div>
         </div>
 
-        <div className="stats shadow">
+        <div className="stats bg-black/30">
           <div className="stat">
-            <div className="stat-title">When</div>
-            <div className="stat-value _event-date-and-time">
-              Fri, 11 Jul 2025 - 17:30
+            <div className="stat-title font-medium"><div className="badge badge-accent">Where</div></div>
+            <div className="stat-value text-xl _event-location">
+              <div className="badge badge-accent">{props.eventLocation}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="stats bg-black/30">
+          <div className="stat">
+            <div className="stat-title font-medium"><div className="badge badge-accent">When</div></div>
+            <div className="stat-value text-xl _event-date-and-time">
+              <div className="badge badge-accent">{props.eventDateAndTime}</div>
             </div>
           </div>
         </div>
